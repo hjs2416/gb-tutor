@@ -9,7 +9,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # 1. Gemini API 키 설정 (Google AI Studio에서 발급)
-genai.configure(api_key="AIzaSyA9-_PHK4BWP55jGRtweJ_oclfaWzzZQE0")
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 model = genai.GenerativeModel('models/gemini-2.5-flash')
 
