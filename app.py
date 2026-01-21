@@ -1,5 +1,6 @@
 import google.generativeai as genai
-genai.configure(api_key="AIzaSyA9-_PHK4BWP55jGRtweJ_oclfaWzzZQE0")
+import streamlit as st
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 for m in genai.list_models():
     print(m.name) # 여기서 출력되는 이름을 확인해보세요!
